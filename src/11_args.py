@@ -26,6 +26,9 @@ def f2(*args):
         sum = sum + i
     return sum
 
+# class solution
+# return sum(args)
+
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
@@ -36,6 +39,9 @@ a = [7, 6, 5, 4]
 
 # How do you have to modify the f2 call below to make this work?
 print(f2([for i in a: return i]))    # Should print 22
+
+# class solution
+# print(f2(*a))
 
 # Write a function f3 that accepts either one or two arguments. If one argument,
 # it returns that value plus 1. If two arguments, it returns the sum of the
@@ -66,6 +72,11 @@ def f4(**kwargs):
     newDict = dict(zip(kwargs, kwargs.values()))
     for k, v in newDict.items():
         print(f'key: {k}, value: {v}')
+
+
+# class solution
+# for key in kwargs:
+#     print(f"key: {key}, value: {kwargs[key]}")
 
 
 # Should print

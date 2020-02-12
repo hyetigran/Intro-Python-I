@@ -17,7 +17,13 @@ class LatLon:
 class Waypoint(LatLon):
     def __init__(self, name, lat, lon):
         super().__init__(lat, lon)
+        self.name = name
 
+    def __str__(self):
+        return f"{self.lat}, {self.lon}. Difficulty: {self.difficulty}"
+
+    def __repr__(self):
+        return f"REPR {self.lat}, {self.lon}. Difficulty: {self.difficulty}"
 # Make a class Geocache that can be passed parameters `name`, `difficulty`,
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
@@ -27,10 +33,11 @@ class Waypoint(LatLon):
 class Geocache(Waypoint):
     def __init__(self, name, lat, lon, difficulty, size):
         super().__init__(name, lat, lon)
+        self.difficulty = difficulty
+        self.size = size
 
     def __str__(self):
-        return str()
-        # l{lat}, {lon}. Difficulty: {difficulty}')
+        return f"{self.lat}, {self.lon}. Difficulty: {self.difficulty}"
 
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521
 
